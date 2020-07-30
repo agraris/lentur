@@ -1,0 +1,21 @@
+.boxes {
+  margin-left: -$boxes-gap;
+  margin-right: -$boxes-gap;
+  margin-top: -$boxes-gap;
+  margin-bottom: $boxes-gap;
+  display: flex;
+}
+
+.box {
+	display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $boxes-gap;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();

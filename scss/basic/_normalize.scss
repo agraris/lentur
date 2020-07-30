@@ -1,0 +1,301 @@
+// normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+
+// Document
+// 
+// 1. Correct the line height in all browsers.
+// 2. Prevent adjustments of font size after orientation changes in iOS.
+// 3. Set overflow
+
+html {
+  line-height: $line-height-default; // 1
+  -webkit-text-size-adjust: 100%; // 2
+  overflow-x: hidden; // 3
+}
+
+// Sections
+// 
+// Remove the margin in all browsers.
+
+body { margin: 0; }
+
+// Render the `main` element consistently in IE.
+
+main { display: block; }
+
+// Typography
+// 
+// 1. Remove the margin from headings `<h1>`-`<h6>` in all browsers.
+
+%heading {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+}
+
+h1 {
+  @extend %heading;
+  font-size: $font-size-h1;
+}
+
+h2 {
+  @extend %heading;
+  font-size: $font-size-h2;
+}
+
+h3 {
+  @extend %heading;
+  font-size: $font-size-h3;
+}
+
+h4 {
+  @extend %heading;
+  font-size: $font-size-h4;
+}
+
+h5 {
+  @extend %heading;
+  font-size: $font-size-h5;
+}
+
+h6 {
+  @extend %heading;
+  font-size: $font-size-h6;
+}
+
+// Grouping content
+// 
+// 1. Add the correct box sizing in Firefox.
+// 2. Show the overflow in Edge and IE.
+// 3. Reset Firefox's gray color
+// 4. Set correct height and prevent the `size` attribute to make the `hr` look like an input field
+//    See https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_hr_size
+
+hr {
+  box-sizing: content-box; // 1
+  height: 0; // 1
+  overflow: visible; // 2
+  margin: $hr-margin-y 0;
+  color: inherit; // 3
+  background-color: currentColor;
+  border: 0;
+
+  &:not([size]) {
+    height: $hr-height; // 4
+  }
+}
+
+// 1. Correct the inheritance and scaling of font size in all browsers.
+// 2. Correct the odd `em` font sizing in all browsers.
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-code; // 1
+  font-size: $font-size-default; // 2
+}
+
+// Text-level semantics
+// 
+// Remove the gray background on active links in IE 10.
+
+a { background-color: transparent; }
+
+// 1. Remove the bottom border in Chrome 57-
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Prevent the text-decoration to be skipped.
+
+abbr[title] {
+  border-bottom: none; // 1
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  text-decoration-skip-ink: none; // 3
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari.
+
+b,
+strong { font-weight: $font-weight-bolder; }
+
+// Add the correct font size in all browsers.
+
+small { font-size: $font-size-small; }
+
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+
+sub,
+sup {
+  font-size: $font-size-sub-sup;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+// Embedded content
+// 
+// 1. Remove the border on images inside links in IE 10.
+
+img,
+svg {
+  vertical-align: middle;
+  border-style: none; // 1
+}
+
+// Forms
+// 
+// 1. Change the font styles in all browsers.
+// 2. Remove the margin in Firefox and Safari.
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; // 1
+  font-size: inherit; // 1
+  line-height: inherit; // 1
+  margin: 0; // 2
+}
+
+// Show the overflow in IE and Edge.
+
+button,
+input { overflow: visible; }
+
+// Remove the inheritance of text transform in Edge, Firefox, and IE.
+
+button,
+select { text-transform: none; }
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+// 3. Opinionated: add "hand" cursor to non-disabled button elements.
+
+button,
+[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
+
+  &:not(:disabled) {
+    cursor: pointer; // 3
+  }
+}
+
+// Remove the inner border and padding in Firefox.
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+// Restore the focus styles unset by the previous rule.
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+// 1. Browsers set a default `min-width: min-content;` on fieldsets,
+//    unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+//    So we reset that to ensure fieldsets behave more like a standard block element.
+//    See https://github.com/twbs/bootstrap/issues/12359
+//    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+// 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
+
+fieldset {
+  min-width: 0; // 1
+  padding: 0; // 2
+  margin: 0; // 2
+  border: 0; // 2
+}
+
+// 
+// 1. Correct the text wrapping in Edge and IE.
+// 2. Correct the color inheritance from `fieldset` elements in IE.
+// 3. Remove the padding so developers are not caught out when they zero out
+//    `fieldset` elements in all browsers.
+// 
+
+legend {
+  box-sizing: border-box; // 1
+  color: inherit; // 2
+  display: table; // 1
+  max-width: 100%; // 1
+  padding: 0; // 2
+  white-space: normal; // 1
+}
+
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+
+progress { vertical-align: baseline; }
+
+// Textareas should really only resize vertically so they don't break their (horizontal) containers.
+
+textarea { resize: vertical; }
+
+// 1. Add the correct box sizing in IE 10.
+// 2. Remove the padding in IE 10.
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; // 1
+  padding: 0; // 2
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+// 1. Correct the odd appearance in Chrome and Safari.
+// 2. Correct the outline style in Safari.
+
+[type="search"] {
+  -webkit-appearance: textfield; // 1
+  outline-offset: -2px; // 2
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // 1
+  font: inherit; // 2
+}
+
+// Interactive
+
+// Add the correct display in Edge, IE 10+, and Firefox.
+
+details { display: block; }
+
+// Add the correct display in all browsers.
+
+summary { display: list-item; }
+
+// Misc
+// 
+// Add the correct display in IE 10+.
+
+template { display: none; }
+
+// Hidden attribute
+//
+// Always hide an element with the `hidden` HTML attribute.
+
+[hidden] { display: none !important; }

@@ -1,0 +1,40 @@
+{
+  "name": "lentur",
+  "version": "0.1.0",
+  "description": "Responsive CSS grid frameword using Flexbox",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agraris/lentur.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "responsive",
+    "flex",
+    "grid",
+    "modern"
+  ],
+  "author": "Fajar Setya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agraris/lentur/issues"
+  },
+  "homepage": "https://github.com/agraris/lentur#readme",
+  "scripts": {
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/lentur.scss dist/css/lentur.css",
+    "watch": "npm run watch-css",
+    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm run css:compile\"",
+    "test": "test"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "csso-cli": "^3.0.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "postcss-cli": "^7.1.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-twbs-bootstrap": "^2.0.3"
+  }
+}

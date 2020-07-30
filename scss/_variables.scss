@@ -1,0 +1,89 @@
+// Variables
+
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0, // Mobile; 0 to 767px
+  sm: 768px, // Tablet; 768px to 1023px
+  md: 1024px, // Desktop; 1024 to 1215px
+  lg: 1216px, // Large desktop 1216 to 1399px
+  xl: 1400px // Extra large desktop 1400 to ~px
+) !default;
+
+// Grid containers
+$container-max-widths: (
+  sm: 748px,
+  md: 984px,
+  lg: 1156px,
+  xl: 1320px
+) !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+// Container
+$container-gap: $spacer;
+
+// Boxes
+$boxes-size:               12 !default;
+$boxes-gap:                $spacer / 2;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+$gutters: $spacers !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-width:             1px !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:   system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:    monospace !default;
+
+$font-family-default:      $font-family-sans-serif !default;
+$font-family-code:         $font-family-monospace !default;
+
+$font-size-default:       1rem !default;
+$font-size-small:         $font-size-default * .85 !default;
+$font-size-large:         $font-size-default * 1.25 !default;
+$font-size-sub-sup:       $font-size-default * .75 !default;
+
+$font-size-h1:            $font-size-default * 2.5 !default;
+$font-size-h2:            $font-size-default * 2 !default;
+$font-size-h3:            $font-size-default * 1.75 !default;
+$font-size-h4:            $font-size-default * 1.5 !default;
+$font-size-h5:            $font-size-default * 1.25 !default;
+$font-size-h6:            $font-size-default !default;
+
+$font-weight-normal:      400 !default;
+$font-weight-bold:        700 !default;
+$font-weight-bolder:      bolder !default;
+
+$line-height-default:     1.5 !default;
+$line-height-small:       1.25 !default;
+$line-height-large:       2 !default;
+
+$headings-margin-bottom:  $spacer / 2 !default;
+
+$hr-margin-y:             $spacer !default;
+$hr-height:               $border-width !default;

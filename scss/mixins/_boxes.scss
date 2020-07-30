@@ -1,0 +1,57 @@
+/// Boxes system
+//
+// Generate box size with these mixins.
+
+@mixin make-box($size, $columns: $boxes-size) {
+  flex: 0 0 auto;
+  width: percentage($size / $columns);
+}
+
+@mixin make-box-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-box-offset($size, $columns: $boxes-size) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$boxes-size`.
+
+@mixin make-grid-columns($columns: $boxes-size, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .box#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .box#{$infix}-auto {
+        @include make-box-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .box#{$infix}-#{$i}by#{$columns} {
+            @include make-box($i, $columns);
+          }
+        }
+
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+            .box-offset#{$infix}-#{$i}by#{$columns} {
+              @include make-box-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}
