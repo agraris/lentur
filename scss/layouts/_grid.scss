@@ -2,6 +2,7 @@
   display: flex;
   margin-top: -$boxes-gap;
   margin-right: -$boxes-gap;
+  margin-bottom: -$boxes-gap;
   margin-left: -$boxes-gap;
 
   &:not(:last-child) {
