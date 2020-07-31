@@ -23,8 +23,9 @@
   "homepage": "https://github.com/agraris/lentur#readme",
   "scripts": {
     "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/lentur.scss dist/css/lentur.css",
+    "css:lint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
     "watch": "npm run watch-css",
-    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm run css:compile\"",
+    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm run css:compile & npm run css:lint\"",
     "test": "test"
   },
   "devDependencies": {
@@ -34,7 +35,6 @@
     "nodemon": "^2.0.4",
     "postcss-cli": "^7.1.1",
     "stylelint": "^13.6.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
   }
 }

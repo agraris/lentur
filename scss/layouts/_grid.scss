@@ -1,16 +1,16 @@
 .boxes {
-  margin-left: -$boxes-gap;
-  margin-right: -$boxes-gap;
-  margin-top: -$boxes-gap;
-  margin-bottom: $boxes-gap;
   display: flex;
+  margin-top: -$boxes-gap;
+  margin-right: -$boxes-gap;
+  margin-bottom: $boxes-gap;
+  margin-left: -$boxes-gap;
 }
 
 .box {
-	display: block;
+  display: block;
   flex-basis: 0;
-  flex-grow: 1;
   flex-shrink: 1;
+  flex-grow: 1;
   padding: $boxes-gap;
 }
 

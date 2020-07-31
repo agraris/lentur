@@ -37,15 +37,15 @@ $spacers: (
 ) !default;
 
 // Container
-$container-gap: $spacer;
+$container-gap: $spacer !default;
 
 // Boxes
 $boxes-size:               12 !default;
-$boxes-gap:                $spacer / 2;
-$grid-gutter-width:           1.5rem !default;
-$grid-row-columns:            6 !default;
+$boxes-gap:                $spacer / 2 !default;
+$grid-gutter-width:        1.5rem !default;
+$grid-row-columns:         6 !default;
 
-$gutters: $spacers !default;
+$gutters:                  $spacers !default;
 
 // Components
 //
@@ -57,7 +57,7 @@ $border-width:             1px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:   system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:   system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:    monospace !default;
 
 $font-family-default:      $font-family-sans-serif !default;
