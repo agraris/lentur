@@ -8,6 +8,10 @@
   &:not(:last-child) {
     margin-bottom: $boxes-gap;
   }
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .box {
