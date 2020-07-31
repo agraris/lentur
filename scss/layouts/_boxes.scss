@@ -2,10 +2,9 @@
   display: flex;
   margin-top: -$boxes-gap;
   margin-right: -$boxes-gap;
-  margin-bottom: -$boxes-gap;
   margin-left: -$boxes-gap;
 
-  &:not(:last-child) {
+  & * .boxes:not(:last-child) {
     margin-bottom: $boxes-gap;
   }
 
