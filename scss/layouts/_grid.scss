@@ -8,9 +8,7 @@
 
 .box {
   display: block;
-  flex-basis: 0;
-  flex-shrink: 1;
-  flex-grow: 1;
+  flex: 1 0 0%;
   padding: $boxes-gap;
 }
 

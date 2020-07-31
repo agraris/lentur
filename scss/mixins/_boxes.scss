@@ -3,12 +3,10 @@
 // Generate box size with these mixins.
 
 @mixin make-box($size, $columns: $boxes-size) {
-  flex: 0 0 auto;
   width: percentage($size / $columns);
 }
 
 @mixin make-box-auto() {
-  flex: 0 0 auto;
   width: auto;
 }
 
@@ -27,19 +25,20 @@
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
-
-      .box#{$infix} {
-        flex: 1 0 0%;
+      %flexbox-box-#{$breakpoint} {
+        flex: 0 0 auto;
       }
 
       .box#{$infix}-auto {
         @include make-box-auto();
+        @extend %flexbox-box-#{$breakpoint};
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
           .box#{$infix}-#{$i}by#{$columns} {
             @include make-box($i, $columns);
+            @extend %flexbox-box-#{$breakpoint};
           }
         }
 
