@@ -1,7 +1,7 @@
 // Variables
-
+//
 // Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// consistent naming.
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -20,13 +20,37 @@ $container-max-widths: (
   xl: 1320px
 ) !default;
 
+// Colors setting
+$blue:                   #00a1ff !default;
+$white:                  hsl(0, 0%, 93%) !default;
+$light:                  hsl(0, 0%, 86%) !default;
+$dark:                   hsl(0, 0%, 14%) !default;
+$black:                  hsl(0, 0%, 7%) !default;
+
+// Colors map
+$colors: (
+  "blue":                  $blue,
+  "white":                 $white,
+  "black":                 $black,
+  "light":                 $light,
+  "dark":                  $dark
+) !default;
+
+// Basic
+//
+// Settings for all basic element.
+
+$body-background:          $white !default;
+$body-color:               $dark !default;
+$body-text-align:          null !default;
+
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer:                   1rem !default;
 $spacers: (
   0: 0,
   1: $spacer / 4,
@@ -37,7 +61,7 @@ $spacers: (
 ) !default;
 
 // Container
-$container-gap: $spacer !default;
+$container-gap:            $spacer !default;
 
 // Boxes
 $boxes-size:               12 !default;

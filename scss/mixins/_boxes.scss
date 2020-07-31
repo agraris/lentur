@@ -27,9 +27,9 @@
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
-      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+
       .box#{$infix} {
-        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+        flex: 1 0 0%;
       }
 
       .box#{$infix}-auto {
@@ -43,9 +43,8 @@
           }
         }
 
-        // `$columns - 1` because offsetting by the width of an entire row isn't possible
         @for $i from 0 through ($columns - 1) {
-          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+          @if not ($infix == "" and $i == 0) {
             .box-offset#{$infix}-#{$i}by#{$columns} {
               @include make-box-offset($i, $columns);
             }
