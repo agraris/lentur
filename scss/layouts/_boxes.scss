@@ -17,6 +17,10 @@
   display: block;
   flex: 1 0 0%;
   padding: $boxes-gap;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
 }
 
 // Columns
