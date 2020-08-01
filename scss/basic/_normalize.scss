@@ -7,9 +7,11 @@
 //
 // 1. Correct the line height in all browsers.
 // 2. Prevent adjustments of font size after orientation changes in iOS.
-// 3. Set overflow
+// 3. Set overflow.
+// 4. Add the correct box sizing.
 
 html {
+  box-sizing: border-box; // 4
   overflow-x: hidden; // 3
   line-height: $line-height-default; // 1
   -webkit-text-size-adjust: 100%; // 2
@@ -314,3 +316,13 @@ template { display: none; }
 // Always hide an element with the `hidden` HTML attribute.
 
 [hidden] { display: none !important; }
+
+// Box-sizing
+//
+// Set all elements with box-sizing inherit from html element
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
