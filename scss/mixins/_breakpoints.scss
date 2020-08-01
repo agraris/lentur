@@ -2,13 +2,13 @@
 //
 // Generate breakpoints with these mixins.
 
-@function breakpoint-min($name, $breakpoints) {
+@function breakpoint-value($name, $breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
 @mixin media-breakpoint-up($name, $breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
+  $min: breakpoint-value($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
       @content;
@@ -19,5 +19,5 @@
 }
 
 @function breakpoint-infix($name, $breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+  @return if(breakpoint-value($name, $breakpoints) == null, "", "-#{$name}");
 }
