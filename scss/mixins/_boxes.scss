@@ -3,15 +3,18 @@
 // Generate box size with these mixins.
 
 @mixin make-box($size, $columns: $boxes-size) {
+  flex: 0 0 auto;
   width: percentage($size / $columns);
 }
 
 @mixin make-box-auto() {
+  flex: 1 0 0%;
   width: auto;
 }
 
 @mixin make-box-offset($size, $columns: $boxes-size) {
   $num: $size / $columns;
+  flex: 1 0 0%;
   margin-left: if($num == 0, 0, percentage($num));
 }
 
@@ -31,14 +34,12 @@
 
       .box#{$infix}-auto {
         @include make-box-auto();
-        @extend %flexbox-box-#{$breakpoint};
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
           .box#{$infix}-#{$i}by#{$columns} {
             @include make-box($i, $columns);
-            @extend %flexbox-box-#{$breakpoint};
           }
         }
 
