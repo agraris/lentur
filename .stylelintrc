@@ -17,7 +17,6 @@
       {
         "ignore": "local"
       }
-    ],
-    "no-empty-source": null
+    ]
   }
 }
