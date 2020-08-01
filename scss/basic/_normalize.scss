@@ -13,7 +13,7 @@
 html {
   box-sizing: border-box; // 4
   overflow-x: hidden; // 3
-  line-height: $line-height-default; // 1
+  line-height: $line-height-normal; // 1
   -webkit-text-size-adjust: 100%; // 2
 }
 
@@ -29,7 +29,7 @@ body {
   font-family: $font-family-default;
   font-size: $font-size-default;
   font-weight: $font-weight-normal;
-  line-height: $line-height-default;
+  line-height: $line-height-normal;
   color: $body-color;
   text-align: $body-text-align;
   background-color: $body-background; // 2
