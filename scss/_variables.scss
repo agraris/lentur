@@ -5,11 +5,11 @@
 
 // Breakpoints
 $breakpoints: (
-  xs: 0, // Mobile; 0 to 767px
-  sm: 768px, // Tablet; 768px to 1023px
-  md: 1024px, // Desktop; 1024 to 1215px
-  lg: 1216px, // Large desktop 1216 to 1399px
-  xl: 1400px // Extra large desktop 1400 to ~px
+  xs: 0, // Mobile; 0 to 727px
+  sm: 728px, // Tablet; 728px to 983px
+  md: 984px, // Desktop; 984px to 1239px
+  lg: 1240px, // Large desktop 1240px to 1559px
+  xl: 1560px // Extra large desktop 1560px to ~px
 ) !default;
 
 // Containers
