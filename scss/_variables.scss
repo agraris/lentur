@@ -80,16 +80,16 @@ $border-width:             1px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:   system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:    monospace !default;
+$font-family-sans-serif:  system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:   monospace !default;
 
-$font-family-default:      $font-family-sans-serif !default;
-$font-family-code:         $font-family-monospace !default;
+$font-family-default:     $font-family-sans-serif !default;
+$font-family-code:        $font-family-monospace !default;
 
 $font-size-default:       1rem !default;
 $font-size-small:         $font-size-default * .85 !default;
 $font-size-large:         $font-size-default * 1.25 !default;
-$font-size-sub-sup:       $font-size-default * .75 !default;
+$font-size-sub-sup:       $font-size-default * .7 !default;
 
 $font-size-h1:            $font-size-default * 2.5 !default;
 $font-size-h2:            $font-size-default * 2 !default;
