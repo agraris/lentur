@@ -1,0 +1,23 @@
+:root {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    $value: breakpoint-min($breakpoint, $breakpoints);
+
+    @if ($value) {
+      --screen#{$infix}: #{$value};
+    }
+  }
+
+  $i: 0;
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    $value: breakpoint-min($breakpoint, $breakpoints);
+
+    @if ($value) {
+      $i: $i + $container-to-breakpoint-multiplier;
+      $container-value: $value - ($container-to-breakpoint-base * $i);
+
+      --container#{$infix}: #{$container-value};
+    }
+  }
+}

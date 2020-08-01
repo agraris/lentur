@@ -20,7 +20,7 @@
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$boxes-size`.
 
-@mixin make-grid-columns($columns: $boxes-size, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+@mixin make-grid-columns($columns: $boxes-size, $gutter: $grid-gutter-width, $breakpoints: $breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 

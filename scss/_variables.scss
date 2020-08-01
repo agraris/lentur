@@ -3,8 +3,8 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming.
 
-// Grid breakpoints
-$grid-breakpoints: (
+// Breakpoints
+$breakpoints: (
   xs: 0, // Mobile; 0 to 767px
   sm: 768px, // Tablet; 768px to 1023px
   md: 1024px, // Desktop; 1024 to 1215px
@@ -12,13 +12,12 @@ $grid-breakpoints: (
   xl: 1400px // Extra large desktop 1400 to ~px
 ) !default;
 
-// Grid containers
-$container-max-widths: (
-  sm: 748px,
-  md: 984px,
-  lg: 1156px,
-  xl: 1320px
-) !default;
+// Containers
+//
+// Generate constant container from breakpoints
+
+$container-to-breakpoint-base: 32px !default;
+$container-to-breakpoint-multiplier: 1 !default;
 
 // Colors setting
 $blue:                   #00a1ff !default;

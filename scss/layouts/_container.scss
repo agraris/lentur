@@ -11,21 +11,21 @@
   width: auto;
 }
 
-@each $breakpoint, $container-max-width in $container-max-widths {
+@each $breakpoint, $container-max-width in $breakpoints {
   .container-#{$breakpoint} {
     @extend .container-flexible;
   }
 
-  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $breakpoints) {
     %responsive-container-#{$breakpoint} {
-      max-width: $container-max-width;
+      max-width: var(--container#{breakpoint-infix($breakpoint, $breakpoints)});
     }
 
     $extend-breakpoint: true;
 
-    @each $name, $width in $grid-breakpoints {
+    @each $name, $width in $breakpoints {
       @if ($extend-breakpoint) {
-        .container#{breakpoint-infix($name, $grid-breakpoints)} {
+        .container#{breakpoint-infix($name, $breakpoints)} {
           @extend %responsive-container-#{$breakpoint};
         }
 
