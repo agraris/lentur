@@ -1,37 +1,50 @@
+// Button normal
 @mixin button(
   $background,
-  $color: lighten($background, 80%)
+  $color: button-text-contrast($background),
+  $background-hover-focus: darken($background, 7.5%)
 ) {
   color: $color;
   background-color: $background;
+  border-color: $background;
 
   &:hover,
   &.hover {
-    color: $color;
-    background-color: darken($background, 5%);
+    background-color: $background-hover-focus;
+    border-color: $background;
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 .15em rgba($color, .15);
+    background-color: $background-hover-focus;
+    border-color: transparent;
+    box-shadow: 0 0 0 .15em rgba($background, .25);
   }
 }
 
+// Button outline
 @mixin button-outline(
-  $color,
-  $desaturated-color: darken($color, 10%)
+  $color
 ) {
   color: $color;
-  border-color: $color;
+  border-color: lighten($color, 30%);
 
   &:hover,
   &.hover {
-    color: $desaturated-color;
-    border-color: $desaturated-color;
+    border-color: $color;
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 .15em rgba($color, .15);
+    background-color: lighten($color, 45%);
+    border-color: $color;
+    box-shadow: 0 0 0 .15em rgba($color, .25);
   }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius; // stylelint-disable-line property-blacklist
 }

@@ -22,14 +22,16 @@ $container-to-breakpoint-base: 16px !default;
 $shy-blue:               #00a1ff !default;
 $royal-purple:           #603f83 !default;
 $island-green:           #2bae66 !default;
-$white:                  hsl(0, 0%, 93%) !default;
-$light:                  hsl(0, 0%, 86%) !default;
+$white:                  hsl(0, 0%, 100%) !default;
+$light:                  hsl(0, 0%, 94%) !default;
 $dark:                   hsl(0, 0%, 14%) !default;
 $black:                  hsl(0, 0%, 7%) !default;
 
 // Colors map
 $colors: (
   "blue":                  $shy-blue,
+  "purple":                $royal-purple,
+  "green":                 $island-green,
   "white":                 $white,
   "black":                 $black,
   "light":                 $light,
@@ -93,7 +95,10 @@ $utilities: map-merge(
 $border-width:            1px !default;
 $border-style:            solid !default;
 $border-color:            transparent !default;
-$border-radius:           .5rem !default;
+
+$border-radius:           4px !default;
+$border-radius-small:     $border-radius - 1px !default;
+$border-radius-large:     $border-radius + 1px !default;
 
 // Typography
 //
@@ -106,8 +111,8 @@ $font-family-default:     $font-family-sans-serif !default;
 $font-family-code:        $font-family-monospace !default;
 
 $font-size-normal:        1rem !default;
-$font-size-small:         $font-size-normal * .85 !default;
-$font-size-large:         $font-size-normal * 1.25 !default;
+$font-size-small:         $font-size-normal * .875 !default;
+$font-size-large:         $font-size-normal * 1.125 !default;
 $font-size-sub-sup:       $font-size-normal * .7 !default;
 
 $font-size-h1:            $font-size-normal * 2.5 !default;
@@ -133,9 +138,13 @@ $hr-height:               $border-width !default;
 // Buttons
 //
 // Define padding, border, radius sizes, text styling and more.
+
+$button-text-color-light: darken($white, 5%) !default;
+$button-text-color-dark:  lighten($black, 5%) !default;
+
 // Normal / Medium Button
 $button-font-size:        $font-size-normal !default;
-$button-padding-x:        calc(.75rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-padding-x:        calc(1rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
 $button-padding-y:        calc(.5rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
 
 $button-border-width:     $border-width !default;
@@ -144,7 +153,17 @@ $button-border-color:     $border-color !default;
 $button-border-radius:    $border-radius !default;
 
 $button-line-height:      $line-height-normal !default;
-$button-transition:       color .25s ease-in-out, background-color .25s ease-in-out, box-shadow .25s ease-in-out !default;
-$button-hover-bg-color:   darken($body-background, 2%) !default;
+$button-transition:       color .125s ease-in-out, background-color .125s ease-in-out, box-shadow .125s ease-in-out !default;
 $button-disabled-opacity: .25 !default;
 
+// Small Button
+$button-font-size-small:      $font-size-small !default;
+$button-padding-x-small:      calc(.875rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-padding-y-small:      calc(.375rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-border-radius-small:  $border-radius-small !default;
+
+// Large Button
+$button-font-size-large:      $font-size-large !default;
+$button-padding-x-large:      calc(1.125rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-padding-y-large:      calc(.625rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-border-radius-large:  $border-radius-large !default;

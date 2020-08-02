@@ -3,25 +3,28 @@
 .button {
   padding: $button-padding-y $button-padding-x;
   line-height: $button-line-height;
-  color: $body-color;
+  color: lighten(button-text-contrast($white), 30%);
   text-align: center;
   white-space: nowrap;
-  background-color: inherit;
-  border: $button-border-width $button-border-style $button-border-color;
+  background-color: $white;
+  border-color: lighten(button-text-contrast($white), 60%);
+  border-style: $button-border-style;
+  border-width: $button-border-width;
   border-radius: $button-border-radius;
   transition: $button-transition;
 
   &:hover,
   &.hover {
-    color: $body-color;
     text-decoration: none;
-    background-color: $button-hover-bg-color;
+    border-color: lighten(button-text-contrast($white), 30%);
   }
 
   &:focus,
   &.focus {
+    background-color: lighten(button-text-contrast($white), 82%);
+    border-color: lighten(button-text-contrast($white), 30%);
     outline: none;
-    box-shadow: 0 0 0 .15em rgba(#000, .1);
+    box-shadow: 0 0 0 .15em rgba(lighten(button-text-contrast($white), 50%), .25);
   }
 
   &:disabled,
@@ -42,4 +45,22 @@
   .button-o-#{$color} {
     @include button-outline($value);
   }
+}
+
+.button-small {
+  @include button-size(
+    $button-padding-y-small,
+    $button-padding-x-small,
+    $button-font-size-small,
+    $button-border-radius-small
+  );
+}
+
+.button-large {
+  @include button-size(
+    $button-padding-y-large,
+    $button-padding-x-large,
+    $button-font-size-large,
+    $button-border-radius-large
+  );
 }
