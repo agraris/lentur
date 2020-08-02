@@ -21,7 +21,7 @@
   &:focus,
   &.focus {
     outline: none;
-    box-shadow: $button-focus-box-shadow;
+    box-shadow: 0 0 0 .15em rgba(#000, .1);
   }
 
   &:disabled,
@@ -29,5 +29,17 @@
     pointer-events: none;
     box-shadow: none;
     opacity: $button-disabled-opacity;
+  }
+}
+
+@each $color, $value in $colors {
+  .button-#{$color} {
+    @include button($value);
+  }
+}
+
+@each $color, $value in $colors {
+  .button-o-#{$color} {
+    @include button-outline($value);
   }
 }

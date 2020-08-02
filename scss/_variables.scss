@@ -146,6 +146,5 @@ $button-border-radius:    $border-radius !default;
 $button-line-height:      $line-height-normal !default;
 $button-transition:       color .25s ease-in-out, background-color .25s ease-in-out, box-shadow .25s ease-in-out !default;
 $button-hover-bg-color:   darken($body-background, 2%) !default;
-$button-focus-box-shadow: 0 0 0 .15em rgba($island-green, .15) !default;
 $button-disabled-opacity: .25 !default;
 
