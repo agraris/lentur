@@ -20,4 +20,7 @@
       --container#{$infix}: #{$container-value};
     }
   }
+
+  --font-family-default: #{$font-family-default};
+  --font-family-code: #{$font-family-code};
 }
