@@ -27,7 +27,7 @@
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
+    @include media-breakpoint($breakpoint, $breakpoints) {
       %flexbox-box-#{$breakpoint} {
         flex: 0 0 auto;
       }

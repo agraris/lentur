@@ -7,7 +7,7 @@
   @return if($min != 0, $min, null);
 }
 
-@mixin media-breakpoint-up($name, $breakpoints) {
+@mixin media-breakpoint($name, $breakpoints) {
   $min: breakpoint-value($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
