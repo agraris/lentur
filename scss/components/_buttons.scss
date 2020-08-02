@@ -1,0 +1,33 @@
+// stylelint-disable property-blacklist
+
+.button {
+  padding: $button-padding-y $button-padding-x;
+  line-height: $button-line-height;
+  color: $body-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: inherit;
+  border: $button-border-width $button-border-style $button-border-color;
+  border-radius: $button-border-radius;
+  transition: $button-transition;
+
+  &:hover,
+  &.hover {
+    color: $body-color;
+    text-decoration: none;
+    background-color: $button-hover-bg-color;
+  }
+
+  &:focus,
+  &.focus {
+    outline: none;
+    box-shadow: $button-focus-box-shadow;
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    opacity: $button-disabled-opacity;
+  }
+}
