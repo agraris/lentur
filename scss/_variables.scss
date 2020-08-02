@@ -80,6 +80,7 @@ $utilities: () !default;
 $utilities: map-merge(
   (
     "align-items"       : true,
+    "text-align"        : true,
     "justify-content"   : true,
   ),
   $utilities
