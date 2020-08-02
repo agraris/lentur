@@ -8,14 +8,12 @@
     }
   }
 
-  $i: 0;
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
     $value: breakpoint-value($breakpoint, $breakpoints);
 
     @if ($value) {
-      $i: $i + $container-to-breakpoint-multiplier;
-      $container-value: $value - ($container-to-breakpoint-base * $i);
+      $container-value: $value - $container-to-breakpoint-base;
 
       --container#{$infix}: #{$container-value};
     }
