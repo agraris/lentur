@@ -16,11 +16,13 @@ $breakpoints: (
 //
 // Generate constant container from breakpoints
 
-$container-to-breakpoint-base: 32px !default;
+$container-to-breakpoint-base: 20px !default;
 $container-to-breakpoint-multiplier: 1 !default;
 
 // Colors setting
-$blue:                   #00a1ff !default;
+$shy-blue:               #00a1ff !default;
+$royal-purple:           #603f83 !default;
+$island-green:           #2bae66 !default;
 $white:                  hsl(0, 0%, 93%) !default;
 $light:                  hsl(0, 0%, 86%) !default;
 $dark:                   hsl(0, 0%, 14%) !default;
@@ -28,7 +30,7 @@ $black:                  hsl(0, 0%, 7%) !default;
 
 // Colors map
 $colors: (
-  "blue":                  $blue,
+  "blue":                  $shy-blue,
   "white":                 $white,
   "black":                 $black,
   "light":                 $light,
