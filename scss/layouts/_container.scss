@@ -1,5 +1,5 @@
 .container,
-.container-flexible {
+.container-fluid {
   padding-right: $container-gap;
   padding-left: $container-gap;
   margin-right: auto;
@@ -13,7 +13,7 @@
 
 @each $breakpoint-name, $container-max-width in $breakpoints {
   .container-#{$breakpoint-name} {
-    @extend .container-flexible;
+    @extend .container-fluid;
   }
 
   @include media-breakpoint($breakpoint-name, $breakpoints) {
