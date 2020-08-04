@@ -2,11 +2,13 @@
   display: flex;
   margin-top: -$boxes-gap;
   margin-right: -$boxes-gap;
+  margin-bottom: $boxes-gap;
   margin-left: -$boxes-gap;
 
-  & * .boxes:not(:last-child) {
-    margin-bottom: $boxes-gap;
-  }
+  // Exprtimental with line 5 (margin-bottom)
+  // &:not(:last-child) {
+  //   margin-bottom: $boxes-gap;
+  // }
 
   &.reverse {
     flex-direction: row-reverse;
@@ -20,6 +22,13 @@
 
   &.reverse {
     flex-direction: column-reverse;
+  }
+
+  // Experimental boxes inside box gap fix
+  > .boxes {
+    &:last-child {
+      margin-bottom: -$boxes-gap;
+    }
   }
 }
 
