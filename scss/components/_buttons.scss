@@ -3,11 +3,11 @@
 .button {
   padding: $button-padding-y $button-padding-x;
   line-height: $button-line-height;
-  color: lighten(button-text-contrast($white), 30%);
+  color: darken($button-border-color, 20%);
   text-align: center;
   white-space: nowrap;
   background-color: $white;
-  border-color: lighten(button-text-contrast($white), 60%);
+  border-color: $button-border-color;
   border-style: $button-border-style;
   border-width: $button-border-width;
   border-radius: $button-border-radius;
@@ -16,15 +16,15 @@
   &:hover,
   &.hover {
     text-decoration: none;
-    border-color: lighten(button-text-contrast($white), 30%);
+    border-color: darken($button-border-color, 20%);
   }
 
   &:focus,
   &.focus {
-    background-color: lighten(button-text-contrast($white), 82%);
-    border-color: lighten(button-text-contrast($white), 30%);
+    background-color: darken($white, 5%);
+    border-color: darken($button-border-color, 20%);
     outline: none;
-    box-shadow: 0 0 0 .15em rgba(lighten(button-text-contrast($white), 50%), .25);
+    box-shadow: 0 0 0 .15em rgba(darken($white, 50%), .25);
   }
 
   &:disabled,
