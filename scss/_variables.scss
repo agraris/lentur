@@ -23,17 +23,15 @@ $shy-blue:               #00a1ff !default;
 $royal-purple:           #603f83 !default;
 $island-green:           #2bae66 !default;
 $white:                  hsl(0, 0%, 100%) !default;
-$light:                  hsl(0, 0%, 94%) !default;
-$dark:                   hsl(0, 0%, 14%) !default;
-$black:                  hsl(0, 0%, 7%) !default;
+$light:                  hsl(0, 0%, 97%) !default;
+$dark:                   hsl(0, 0%, 21%) !default;
+$black:                  hsl(0, 0%, 14%) !default;
 
 // Colors map
 $colors: (
   "blue":                  $shy-blue,
   "purple":                $royal-purple,
   "green":                 $island-green,
-  "white":                 $white,
-  "black":                 $black,
   "light":                 $light,
   "dark":                  $dark
 ) !default;
@@ -94,7 +92,7 @@ $utilities: map-merge(
 
 $border-width:            1px !default;
 $border-style:            solid !default;
-$border-color:            darken($white, 30%) !default;
+$border-color:            darken($white, 20%) !default;
 
 $border-radius:           4px !default;
 $border-radius-small:     $border-radius - 1px !default;
@@ -156,7 +154,7 @@ $form-border-color:       $border-color !default;
 $form-border-radius:      $border-radius !default;
 
 $form-transition:         color .125s ease-in-out, background-color .125s ease-in-out, box-shadow .125s ease-in-out !default;
-$form-disabled-opacity:   .5 !default;
+$form-disabled-opacity:   .7 !default;
 
 // Small forms
 $form-font-size-small:      $font-size-small !default;
@@ -180,12 +178,8 @@ $button-line-height:          $line-height-normal !default;
 $button-padding-x:            $form-padding-x !default;
 $button-padding-y:            $form-padding-y !default;
 
-$button-text-color-light:     $form-text-color-light !default;
-$button-text-color-dark:      $form-text-color-dark !default;
-
 $button-border-width:         $form-border-width !default;
 $button-border-style:         $form-border-style !default;
-$button-border-color:         $form-border-color !default;
 $button-border-radius:        $form-border-radius !default;
 
 $button-transition:           $form-transition !default;

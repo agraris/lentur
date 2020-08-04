@@ -3,11 +3,11 @@
 .button {
   padding: $button-padding-y $button-padding-x;
   line-height: $button-line-height;
-  color: darken($button-border-color, 20%);
+  color: $body-color;
   text-align: center;
   white-space: nowrap;
-  background-color: $white;
-  border-color: $button-border-color;
+  background-color: transparent;
+  border-color: $border-color;
   border-style: $button-border-style;
   border-width: $button-border-width;
   border-radius: $button-border-radius;
@@ -16,15 +16,15 @@
   &:hover,
   &.hover {
     text-decoration: none;
-    border-color: darken($button-border-color, 20%);
+    border-color: darken($border-color, 15%); // .button:hover {border-color} has 20% darker than .button {border-color}
   }
 
   &:focus,
   &.focus {
     background-color: darken($white, 5%);
-    border-color: darken($button-border-color, 20%);
+    border-color: darken($border-color, 15%); // .button:focus {border-color} has 20% darker than .button {border-color}
     outline: none;
-    box-shadow: 0 0 0 .15em rgba(darken($white, 50%), .25);
+    box-shadow: 0 0 0 .15em rgba(mix($body-color, darken($border-color, 15%), 20%), .25);
   }
 
   &:disabled,

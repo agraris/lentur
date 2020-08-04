@@ -1,44 +1,46 @@
 // Button normal
 @mixin button(
-  $background,
-  $color: button-text-contrast($background),
-  $background-hover-focus: darken($background, 7.5%)
+  $color,
+  $text-color: button-text-contrast($color),
+  $border-color: $color
 ) {
-  color: $color;
-  background-color: $background;
-  border-color: $background;
+  color: $text-color;
+  background-color: $color;
+  border-color: $border-color;
 
   &:hover,
   &.hover {
-    background-color: $background-hover-focus;
-    border-color: $background;
+    background-color: darken($border-color, 5%);
+    border-color: transparent;
   }
 
   &:focus,
   &.focus {
-    background-color: $background-hover-focus;
+    background-color: darken($border-color, 5%);
     border-color: transparent;
-    box-shadow: 0 0 0 .15em rgba($background, .25);
+    box-shadow: 0 0 0 .15em rgba(mix($text-color, $border-color, 20%), .25);
   }
 }
 
 // Button outline
 @mixin button-outline(
-  $color
+  $color,
+  $text-color: $color,
+  $border-color: lighten($color, 30%)
 ) {
-  color: $color;
-  border-color: lighten($color, 30%);
+  color: $text-color;
+  border-color: $border-color;
 
   &:hover,
   &.hover {
-    border-color: $color;
+    border-color: darken($border-color, 20%);
   }
 
   &:focus,
   &.focus {
-    background-color: lighten($color, 45%);
-    border-color: $color;
-    box-shadow: 0 0 0 .15em rgba($color, .25);
+    background-color: lighten($text-color, 46%);
+    border-color: darken($border-color, 20%);
+    box-shadow: 0 0 0 .15em rgba(mix($color, $border-color, 20%), .25);
   }
 }
 
