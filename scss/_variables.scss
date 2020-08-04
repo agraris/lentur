@@ -94,7 +94,7 @@ $utilities: map-merge(
 
 $border-width:            1px !default;
 $border-style:            solid !default;
-$border-color:            transparent !default;
+$border-color:            darken($white, 30%) !default;
 
 $border-radius:           4px !default;
 $border-radius-small:     $border-radius - 1px !default;
@@ -134,6 +134,41 @@ $headings-margin-bottom:  $spacer / 2 !default;
 
 $hr-margin-y:             $spacer !default;
 $hr-height:               $border-width !default;
+
+// Forms
+//
+// Define all variables of form element (input, textarea, radio, range, and more)
+
+$form-font-size:          $font-size-normal !default;
+$form-font-family:        $font-family-default !default;
+$form-font-weight:        $font-weight-normal !default;
+$form-line-height:        $line-height-normal !default;
+
+$form-padding-x:          calc(1rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-y:          calc(.5rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+
+$form-text-color-light:   darken($white, 5%) !default;
+$form-text-color-dark:    lighten($black, 5%) !default;
+
+$form-border-width:       $border-width !default;
+$form-border-style:       $border-style !default;
+$form-border-color:       $border-color !default;
+$form-border-radius:      $border-radius !default;
+
+$form-transition:         color .125s ease-in-out, background-color .125s ease-in-out, box-shadow .125s ease-in-out !default;
+$form-disabled-opacity:   .5 !default;
+
+// Small forms
+$form-font-size-small:      $font-size-small !default;
+$form-padding-x-small:      calc(.875rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-y-small:      calc(.375rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-border-radius-small:  $border-radius-small !default;
+
+// Large forms
+$form-font-size-large:      $font-size-large !default;
+$form-padding-x-large:      calc(1.125rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-y-large:      calc(.625rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-border-radius-large:  $border-radius-large !default;
 
 // Buttons
 //

@@ -1,0 +1,38 @@
+// stylelint-disable property-blacklist
+
+.input {
+  display: block;
+  width: 100%;
+  padding: $form-padding-y $form-padding-x;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  font-weight: $form-font-weight;
+  line-height: $form-line-height;
+  color: $form-text-color-dark;
+  background-color: $white;
+  background-clip: padding-box;
+  border: $form-border-width solid $form-border-color;
+  border-radius: $form-border-radius;
+  appearance: none; // Fix appearance for date inputs in Safari
+
+  &:hover,
+  &.hover {
+    text-decoration: none;
+    border-color: darken($form-border-color, 20%);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: darken($white, 5%);
+    border-color: darken($form-border-color, 20%);
+    outline: none;
+    box-shadow: 0 0 0 .15em rgba(darken($white, 50%), .25);
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    opacity: $form-disabled-opacity;
+  }
+}
