@@ -174,31 +174,31 @@ $form-border-radius-large:  $border-radius-large !default;
 //
 // Define padding, border, radius sizes, text styling and more.
 
-$button-text-color-light: darken($white, 5%) !default;
-$button-text-color-dark:  lighten($black, 5%) !default;
-
 // Normal / Medium Button
-$button-font-size:        $font-size-normal !default;
-$button-padding-x:        calc(1rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$button-padding-y:        calc(.5rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$button-font-size:            $font-size-normal !default;
+$button-line-height:          $line-height-normal !default;
+$button-padding-x:            $form-padding-x !default;
+$button-padding-y:            $form-padding-y !default;
 
-$button-border-width:     $border-width !default;
-$button-border-style:     $border-style !default;
-$button-border-color:     $border-color !default;
-$button-border-radius:    $border-radius !default;
+$button-text-color-light:     $form-text-color-light !default;
+$button-text-color-dark:      $form-text-color-dark !default;
 
-$button-line-height:      $line-height-normal !default;
-$button-transition:       color .125s ease-in-out, background-color .125s ease-in-out, box-shadow .125s ease-in-out !default;
-$button-disabled-opacity: .25 !default;
+$button-border-width:         $form-border-width !default;
+$button-border-style:         $form-border-style !default;
+$button-border-color:         $form-border-color !default;
+$button-border-radius:        $form-border-radius !default;
 
-// Small Button
-$button-font-size-small:      $font-size-small !default;
-$button-padding-x-small:      calc(.875rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$button-padding-y-small:      calc(.375rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$button-border-radius-small:  $border-radius-small !default;
+$button-transition:           $form-transition !default;
+$button-disabled-opacity:     $form-disabled-opacity !default;
 
-// Large Button
-$button-font-size-large:      $font-size-large !default;
-$button-padding-x-large:      calc(1.125rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$button-padding-y-large:      calc(.625rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$button-border-radius-large:  $border-radius-large !default;
+// Small button
+$button-font-size-small:      $form-font-size-small !default;
+$button-padding-x-small:      $form-padding-x-small !default;
+$button-padding-y-small:      $form-padding-y-small !default;
+$button-border-radius-small:  $form-border-radius-small !default;
+
+// Large button
+$button-font-size-large:      $form-font-size-large !default;
+$button-padding-x-large:      $form-padding-x-large !default;
+$button-padding-y-large:      $form-padding-y-large !default;
+$button-border-radius-large:  $form-border-radius-large !default;
