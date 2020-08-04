@@ -1,4 +1,4 @@
-/// Boxes system
+// Boxes system
 //
 // Generate box size with these mixins.
 
@@ -18,20 +18,15 @@
   margin-left: if($num == 0, 0, percentage($num));
 }
 
-// Framework grid generation
+// Box generation
 //
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `$boxes-size`.
+// Used to generate all boxes breakpoints.
 
-@mixin make-grid-columns($columns: $boxes-size, $gutter: $grid-gutter-width, $breakpoints: $breakpoints) {
+@mixin make-breakpoint-box($columns: $boxes-size, $gutter: $grid-gutter-width, $breakpoints: $breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint($breakpoint, $breakpoints) {
-      %flexbox-box-#{$breakpoint} {
-        flex: 0 0 auto;
-      }
-
       .box#{$infix}-auto {
         @include make-box-auto();
       }
