@@ -1,5 +1,6 @@
 // stylelint-disable property-blacklist
 
+// Form input
 .input {
   display: block;
   width: 100%;
@@ -36,3 +37,22 @@
     opacity: $form-disabled-opacity;
   }
 }
+
+.input-small {
+  @include form-size(
+    $form-input-padding-y-small,
+    $form-input-padding-x-small,
+    $form-input-font-size-small,
+    $form-input-border-radius-small
+  );
+}
+
+.input-large {
+  @include form-size(
+    $form-input-padding-y-large,
+    $form-input-padding-x-large,
+    $form-input-font-size-large,
+    $form-input-border-radius-large
+  );
+}
+
