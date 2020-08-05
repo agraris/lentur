@@ -168,6 +168,31 @@ $form-padding-x-large:      calc(1.125rem - #{$border-width * 2}) !default; // s
 $form-padding-y-large:      calc(.625rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
 $form-border-radius-large:  $border-radius-large !default;
 
+// Form input
+$form-input-font-size-small:      $form-font-size-small !default;
+$form-input-padding-x-small:      $form-padding-x-small !default;
+$form-input-padding-y-small:      $form-padding-y-small !default;
+$form-input-border-radius-small:  $form-border-radius-small !default;
+
+$form-input-font-size-large:      $form-font-size-large !default;
+$form-input-padding-x-large:      $form-padding-x-large !default;
+$form-input-padding-y-large:      $form-padding-y-large !default;
+$form-input-border-radius-large:  $form-border-radius-large !default;
+
+// Form select
+$form-select-indicator-color:      $dark !default;
+$form-select-indicator:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#{$form-select-indicator-color}' d='M18.51 26.75l11.22 -19.53c0.89,-1.92 -0.5,-4.17 -2.66,-4.16 -7.48,-0.05 -14.85,-0.05 -22.33,0 -2.12,-0.01 -3.49,2.15 -2.7,4.04 3.77,6.57 7.51,13.08 11.28,19.64 1.14,2.04 4.05,2.04 5.19,0.01z'/></svg>") !default;
+
+$form-select-font-size-small:      $form-font-size-small !default;
+$form-select-padding-x-small:      $form-padding-x-small !default;
+$form-select-padding-y-small:      $form-padding-y-small !default;
+$form-select-border-radius-small:  $form-border-radius-small !default;
+
+$form-select-font-size-large:      $form-font-size-large !default;
+$form-select-padding-x-large:      $form-padding-x-large !default;
+$form-select-padding-y-large:      $form-padding-y-large !default;
+$form-select-border-radius-large:  $form-border-radius-large !default;
+
 // Buttons
 //
 // Define padding, border, radius sizes, text styling and more.

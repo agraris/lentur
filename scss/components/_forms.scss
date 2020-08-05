@@ -14,7 +14,7 @@
   background-clip: padding-box;
   border: $form-border-width solid $form-border-color;
   border-radius: $form-border-radius;
-  appearance: none; // Fix appearance for date inputs in Safari
+  appearance: none;
 
   &:hover,
   &.hover {
@@ -56,3 +56,63 @@
   );
 }
 
+
+// Form select
+
+.select {
+  display: block;
+  width: 100%;
+  padding: $form-padding-y $form-padding-x;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  font-weight: $form-font-weight;
+  line-height: $form-line-height;
+  color: $form-text-color-dark;
+  background-color: $white;
+  background-image: escape-svg($form-select-indicator);
+  background-repeat: no-repeat;
+  background-position: right $form-padding-x center;
+  background-size: 16px 12px;
+  border: $form-border-width solid $form-border-color;
+  border-radius: $form-border-radius;
+  appearance: none;
+
+  &:hover,
+  &.hover {
+    text-decoration: none;
+    border-color: darken($form-border-color, 20%);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: darken($white, 5%);
+    border-color: darken($form-border-color, 20%);
+    outline: none;
+    box-shadow: 0 0 0 .15em rgba(darken($white, 50%), .25);
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    opacity: $form-disabled-opacity;
+  }
+}
+
+.select-small {
+  @include form-size(
+    $form-select-padding-y-small,
+    $form-select-padding-x-small,
+    $form-select-font-size-small,
+    $form-select-border-radius-small
+  );
+}
+
+.select-large {
+  @include form-size(
+    $form-select-padding-y-large,
+    $form-select-padding-x-large,
+    $form-select-font-size-large,
+    $form-select-border-radius-large
+  );
+}
