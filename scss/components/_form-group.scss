@@ -1,0 +1,84 @@
+// stylelint-disable property-blacklist
+
+.group {
+  display: flex;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: $boxes-gap * 2;
+  }
+
+  // Generic input
+  > .input {
+    &:not(:last-child) {
+      margin-right: -$button-border-width;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+      z-index: 1;
+    }
+
+    &:focus,
+    &.focus {
+      z-index: 9;
+    }
+  }
+
+  // Input label
+  > .input-label-prepend,
+  > .input-label-append {
+    display: flex;
+    margin-right: -$button-border-width;
+
+    > .input-label {
+      display: flex;
+      padding: $form-padding-y $form-padding-x;
+      color: $form-text-color-dark;
+      white-space: nowrap;
+      background-color: darken($white, 10%);
+      border-color: $form-border-color;
+      border-style: solid;
+      border-width: $form-border-width;
+      border-radius: $form-border-radius;
+    }
+  }
+
+  // Input label prepend
+  > .input-label-prepend {
+    > .input-label {
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:not(:first-child) {
+        margin-left: -$button-border-width;
+        border-radius: 0;
+      }
+    }
+  }
+
+  > .input-label-append {
+    > .input-label {
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:not(:last-child) {
+        margin-right: -$button-border-width;
+        border-radius: 0;
+      }
+    }
+  }
+}
