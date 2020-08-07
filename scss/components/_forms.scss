@@ -57,6 +57,19 @@
   &[type="file"] {
     padding: $form-padding-y;
   }
+
+  &[type="range"],
+  &[type="checkbox"],
+  &[type="radio"] {
+    padding: 0;
+    appearance: auto;
+
+    &:focus,
+    &.focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 
 .input-small {

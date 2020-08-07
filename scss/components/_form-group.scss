@@ -27,6 +27,14 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
+    // Reset checkbox and radio appearance
+    &[type="checkbox"],
+    &[type="radio"] {
+      width: auto;
+      margin-top: .35rem;
+      margin-right: 1rem;
+    }
   }
 
   // Input label
