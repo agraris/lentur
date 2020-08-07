@@ -142,8 +142,8 @@ $form-font-family:        $font-family-default !default;
 $form-font-weight:        $font-weight-normal !default;
 $form-line-height:        $line-height-normal !default;
 
-$form-padding-x:          calc(1rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$form-padding-y:          calc(.5rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-x:          #{16px - ($border-width * 2)} !default; // stylelint-disable-line function-blacklist
+$form-padding-y:          #{8px - ($border-width * 2)} !default; // stylelint-disable-line function-blacklist
 
 $form-text-color-light:   darken($white, 5%) !default;
 $form-text-color-dark:    lighten($black, 5%) !default;

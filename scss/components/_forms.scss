@@ -1,20 +1,25 @@
-// stylelint-disable property-blacklist
+// stylelint-disable property-blacklist,function-blacklist
 
-// Form input
-.input {
+// General properties
+.input,
+.select {
   display: block;
   width: 100%;
-  padding: $form-padding-y $form-padding-x;
   font-family: $form-font-family;
   font-size: $form-font-size;
   font-weight: $form-font-weight;
   line-height: $form-line-height;
   color: $form-text-color-dark;
   background-color: $white;
-  background-clip: padding-box;
   border: $form-border-width solid $form-border-color;
   border-radius: $form-border-radius;
   appearance: none;
+}
+
+// Form input
+.input {
+  padding: $form-padding-y $form-padding-x;
+  background-clip: padding-box;
 
   &:hover,
   &.hover {
@@ -60,22 +65,11 @@
 // Form select
 
 .select {
-  display: block;
-  width: 100%;
-  padding: $form-padding-y $form-padding-x;
-  font-family: $form-font-family;
-  font-size: $form-font-size;
-  font-weight: $form-font-weight;
-  line-height: $form-line-height;
-  color: $form-text-color-dark;
-  background-color: $white;
+  padding: $form-padding-y calc(#{$form-padding-x} * 3) $form-padding-y $form-padding-x;
   background-image: escape-svg($form-select-indicator);
   background-repeat: no-repeat;
   background-position: right $form-padding-x center;
   background-size: 16px 12px;
-  border: $form-border-width solid $form-border-color;
-  border-radius: $form-border-radius;
-  appearance: none;
 
   &:hover,
   &.hover {
@@ -104,7 +98,8 @@
     $form-select-padding-y-small,
     $form-select-padding-x-small,
     $form-select-font-size-small,
-    $form-select-border-radius-small
+    $form-select-border-radius-small,
+    "select"
   );
 }
 
@@ -113,6 +108,7 @@
     $form-select-padding-y-large,
     $form-select-padding-x-large,
     $form-select-font-size-large,
-    $form-select-border-radius-large
+    $form-select-border-radius-large,
+    "select"
   );
 }

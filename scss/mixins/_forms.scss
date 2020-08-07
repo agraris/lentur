@@ -1,5 +1,11 @@
-@mixin form-size($padding-y, $padding-x, $font-size, $border-radius) {
-  padding: $padding-y $padding-x;
+// stylelint-disable function-blacklist
+@mixin form-size($padding-y, $padding-x, $font-size, $border-radius, $type: "input") {
+  @if ($type == "input") {
+    padding: $padding-y $padding-x;
+  }
+  @else if ($type == "select") {
+    padding: $padding-y calc(#{$padding-x} * 3) $padding-y $padding-x;
+  }
   font-size: $font-size;
   border-radius: $border-radius; // stylelint-disable-line property-blacklist
 }
