@@ -4,8 +4,15 @@
   display: flex;
   justify-content: flex-start;
 
-  &:not(:last-child) {
-    margin-bottom: $boxes-gap * 2;
+  > :not(:last-child) {
+    margin-right: -$button-border-width;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > :not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   // Generic input
@@ -19,18 +26,6 @@
     &:not(:first-child) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-    }
-
-    &:hover,
-    &.hover,
-    &:active,
-    &.active {
-      z-index: 1;
-    }
-
-    &:focus,
-    &.focus {
-      z-index: 9;
     }
   }
 

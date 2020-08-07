@@ -14,6 +14,18 @@
   border: $form-border-width solid $form-border-color;
   border-radius: $form-border-radius;
   appearance: none;
+
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
+    z-index: 1;
+  }
+
+  &:focus,
+  &.focus {
+    z-index: 9;
+  }
 }
 
 // Form input
