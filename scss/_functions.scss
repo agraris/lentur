@@ -1,3 +1,7 @@
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
 @function button-text-contrast($color) {
   @if (lightness($color) > 50) {
     @return $dark;
