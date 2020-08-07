@@ -142,8 +142,8 @@ $form-font-family:        $font-family-default !default;
 $form-font-weight:        $font-weight-normal !default;
 $form-line-height:        $line-height-normal !default;
 
-$form-padding-x:          #{16px - ($border-width * 2)} !default; // stylelint-disable-line function-blacklist
-$form-padding-y:          #{8px - ($border-width * 2)} !default; // stylelint-disable-line function-blacklist
+$form-padding-x:          1rem !default;
+$form-padding-y:          .5rem !default;
 
 $form-text-color-light:   darken($white, 5%) !default;
 $form-text-color-dark:    lighten($black, 5%) !default;
@@ -158,14 +158,14 @@ $form-disabled-opacity:   .7 !default;
 
 // Small forms
 $form-font-size-small:      $font-size-small !default;
-$form-padding-x-small:      calc(.875rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$form-padding-y-small:      calc(.375rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-x-small:      .875rem !default;
+$form-padding-y-small:      .375rem !default;
 $form-border-radius-small:  $border-radius-small !default;
 
 // Large forms
 $form-font-size-large:      $font-size-large !default;
-$form-padding-x-large:      calc(1.125rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
-$form-padding-y-large:      calc(.625rem - #{$border-width * 2}) !default; // stylelint-disable-line function-blacklist
+$form-padding-x-large:      1.125rem !default;
+$form-padding-y-large:      .625rem !default;
 $form-border-radius-large:  $border-radius-large !default;
 
 // Form input
