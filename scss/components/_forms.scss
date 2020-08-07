@@ -80,10 +80,10 @@
 
 // Form select
 .select {
-  padding: $form-padding-y ($form-padding-x * 2.5) $form-padding-y $form-padding-x;
+  padding: $form-padding-y ($form-padding-x * 1.5) $form-padding-y $form-padding-x;
   background-image: escape-svg($form-select-indicator);
   background-repeat: no-repeat;
-  background-position: right $form-padding-x center;
+  background-position: right $form-padding-x / 1.9 center;
   background-size: 16px 12px;
 
   &:hover,

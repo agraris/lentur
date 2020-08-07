@@ -4,7 +4,7 @@
     padding: $padding-y $padding-x;
   }
   @else if ($type == "select") {
-    padding: $padding-y ($padding-x * 2.5) $padding-y $padding-x;
+    padding: $padding-y ($padding-x * 1.9) $padding-y $padding-x;
   }
   font-size: $font-size;
   border-radius: $border-radius; // stylelint-disable-line property-blacklist
