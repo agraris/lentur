@@ -145,6 +145,16 @@ $code-color:              #d73e48 !default;
 $code-background:         #fcf2f2 !default;
 $code-border-radius:      $border-radius !default;
 
+// Table
+//
+// Define all variables of table element table, th, td, and more.
+
+$table-cell-padding-x:    1rem !default;
+$table-cell-padding-y:    .5rem !default;
+
+$table-odd-background:    #eef0f3 !default;
+$table-hover-background:  #e6e8ec !default;
+
 // Forms
 //
 // Define all variables of form element (input, textarea, radio, range, and more)

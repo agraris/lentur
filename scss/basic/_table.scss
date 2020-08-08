@@ -1,0 +1,42 @@
+.table {
+  width: 100%;
+  margin-bottom: $spacer;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    border-bottom: $border-width solid $border-color;
+  }
+
+  th {
+    border-bottom-width: $border-width * 2;
+  }
+
+  // Table strip
+  &.strip {
+    tbody {
+      tr:nth-of-type(odd) {
+        background: $table-odd-background;
+      }
+    }
+  }
+
+  // Table scroll
+  &.scroll {
+    display: block;
+    padding-bottom: $spacer;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  // Table hover
+  &.hover {
+    tbody {
+      tr:hover {
+        background: $table-hover-background;
+      }
+    }
+  }
+}
