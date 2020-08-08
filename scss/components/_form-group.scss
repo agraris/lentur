@@ -37,13 +37,13 @@
     }
   }
 
-  // Input label
-  > .input-label-prepend,
-  > .input-label-append {
+  // Label
+  > .label-prepend,
+  > .label-append {
     display: flex;
     margin-right: -$button-border-width;
 
-    > .input-label {
+    > .label {
       display: flex;
       padding: $form-padding-y $form-padding-x;
       color: $form-text-color-dark;
@@ -57,8 +57,8 @@
   }
 
   // Input label prepend
-  > .input-label-prepend {
-    > .input-label {
+  > .label-prepend {
+    > .label {
       &:first-child {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -71,8 +71,8 @@
     }
   }
 
-  > .input-label-append {
-    > .input-label {
+  > .label-append {
+    > .label {
       &:last-child {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
