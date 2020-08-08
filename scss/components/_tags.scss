@@ -1,0 +1,8 @@
+// stylelint-disable property-blacklist
+.tag {
+  padding: .05rem .5rem;
+  font-size: $font-size-small;
+  line-height: 1;
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
+}
