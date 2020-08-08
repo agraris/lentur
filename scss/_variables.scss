@@ -113,13 +113,6 @@ $font-size-small:         $font-size-normal * .875 !default;
 $font-size-large:         $font-size-normal * 1.125 !default;
 $font-size-sub-sup:       $font-size-normal * .7 !default;
 
-$font-size-h1:            $font-size-normal * 2.5 !default;
-$font-size-h2:            $font-size-normal * 2 !default;
-$font-size-h3:            $font-size-normal * 1.75 !default;
-$font-size-h4:            $font-size-normal * 1.5 !default;
-$font-size-h5:            $font-size-normal * 1.25 !default;
-$font-size-h6:            $font-size-normal !default;
-
 $font-weight-normal:      400 !default;
 $font-weight-bold:        700 !default;
 $font-weight-bolder:      bolder !default;
@@ -133,6 +126,14 @@ $paragraph-margin-bottom: 1.2rem !default;
 
 $hr-margin-y:             $spacer !default;
 $hr-height:               $border-width !default;
+
+// Headings
+$heading-size-h1:         $font-size-normal * 2.5 !default;
+$heading-size-h2:         $font-size-normal * 2 !default;
+$heading-size-h3:         $font-size-normal * 1.75 !default;
+$heading-size-h4:         $font-size-normal * 1.5 !default;
+$heading-size-h5:         $font-size-normal * 1.25 !default;
+$heading-size-h6:         $font-size-normal !default;
 
 // Lists (Ordered and Unordered)
 $list-indent-size:        2rem !default;
