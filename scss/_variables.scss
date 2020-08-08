@@ -128,10 +128,21 @@ $line-height-normal:      1.5 !default;
 $line-height-small:       1.25 !default;
 $line-height-large:       2 !default;
 
-$headings-margin-bottom:  .5em !default;
+$headings-margin-bottom:  1.2rem !default;
+$paragraph-margin-bottom: 1.2rem !default;
 
 $hr-margin-y:             $spacer !default;
 $hr-height:               $border-width !default;
+
+// Lists (Ordered and Unordered)
+$list-indent-size:        2rem !default;
+$list-spacing:            .5rem !default;
+
+// Code
+$code-padding:            .25rem .5rem !default;
+$code-color:              #d73e48 !default;
+$code-background:         #fcf2f2 !default;
+$code-border-radius:      $border-radius !default;
 
 // Forms
 //

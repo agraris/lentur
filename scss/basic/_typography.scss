@@ -1,0 +1,58 @@
+// stylelint-disable property-blacklist
+//
+// Headings
+//
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+//
+// Paragraphs
+//
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+//
+// Lists
+//
+ul,
+ol {
+  padding-left: $list-indent-size;
+
+  li {
+    margin-top: $list-spacing;
+    margin-bottom: $list-spacing;
+  }
+}
+
+//
+// Miscs
+//
+code {
+  padding: $code-padding;
+  color: $code-color;
+  background: $code-background;
+  border-radius: $code-border-radius;
+}
