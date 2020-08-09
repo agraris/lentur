@@ -11,7 +11,7 @@
   }
 }
 
-// Taken from Boostrap function (line 12 to 45)
+// Taken from Boostrap function (line 16 to 49)
 // @author Hugo Giraudel
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
