@@ -18,20 +18,49 @@ $breakpoints: (
 
 $container-to-breakpoint-base: 16px !default;
 
-// Colors setting
-$shy-blue:               #00a1ff !default;
-$royal-purple:           #603f83 !default;
-$island-green:           #2bae66 !default;
+// Colors
+//
+// List of colors for theming
+
+// Grayscale list
 $white:                  hsl(0, 0%, 100%) !default;
-$light:                  hsl(0, 0%, 97%) !default;
-$dark:                   hsl(0, 0%, 21%) !default;
-$black:                  hsl(0, 0%, 14%) !default;
+$gray-1:                 hsl(0, 0%, 83.333%) !default;
+$gray-2:                 hsl(0, 0%, 66.667%) !default;
+$gray-3:                 hsl(0, 0%, 50%) !default;
+$gray-4:                 hsl(0, 0%, 33.333%) !default;
+$gray-5:                 hsl(0, 0%, 16.667%) !default;
+$black:                  hsl(0, 0%, 0%) !default;
+
+// Color list
+$brandeis-blue:          #0070ff !default;
+$vivid-malachite:        #0c3 !default;
+$sub-beam:               #febd36 !default;
+$crayola:                #ff5349 !default;
 
 // Colors map
 $colors: (
-  "blue":                  $shy-blue,
-  "purple":                $royal-purple,
-  "green":                 $island-green,
+  "blue":                  $brandeis-blue,
+  "green":                 $vivid-malachite,
+  "orange":                $sub-beam,
+  "red":                   $crayola,
+  "light":                 $gray-1,
+  "dark":                  $gray-5
+) !default;
+
+// Theme color list
+$default:                  $brandeis-blue !default;
+$success:                  $vivid-malachite !default;
+$warning:                  $sub-beam !default;
+$danger:                   $crayola !default;
+$light:                    $gray-1 !default;
+$dark:                     $gray-5 !default;
+
+// Theme color map
+$theme-colors: (
+  "default":               $default,
+  "success":               $success,
+  "warning":               $warning,
+  "danger":                $danger,
   "light":                 $light,
   "dark":                  $dark
 ) !default;
