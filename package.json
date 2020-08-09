@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/agraris/lentur#readme",
   "scripts": {
-    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/lentur.scss dist/css/lentur.css",
+    "css": "npm run css:lint && npm run css:compile && npm run css:prefix && npm run css:minify",
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/lentur.scss dist/lentur.css",
     "css:lint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
+    "css:minify": "csso dist/lentur.css --output dist/lentur.min.css --source-map dist/lentur.min.css.map",
+    "css:prefix": "postcss --use autoprefixer --map true --output dist/lentur.css dist/lentur.css",
     "watch": "npm run watch-css",
-    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm run css:lint & npm run css:compile\"",
-    "test": "test"
+    "watch-css": "nodemon --watch scss/ --ext scss --exec \"npm run css:lint && npm run css:compile\""
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
@@ -40,6 +42,18 @@
     "stylelint": "^13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
+  "browserslist": [
+    ">= 1%",
+    "last 1 major version",
+    "not dead",
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Edge >= 16",
+    "iOS >= 10",
+    "Safari >= 10",
+    "Android >= 6",
+    "not Explorer <= 11"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
