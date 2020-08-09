@@ -4,10 +4,10 @@
 
 @function button-text-contrast($color) {
   @if (lightness($color) > 50) {
-    @return $dark;
+    @return $black;
   }
   @else {
-    @return $light;
+    @return $white;
   }
 }
 
